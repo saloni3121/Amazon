@@ -13,6 +13,8 @@
 .subtotal__gift{
     display: flex;
     align-items: center;
+    margin-top: -5px;
+    text-decoration: none;
 }
 .subtotal__gift > input{
     margin-right: 5px;

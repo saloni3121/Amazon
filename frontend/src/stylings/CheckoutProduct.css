@@ -5,6 +5,9 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 1px solid lightgray;
+    background-color: #f3f3f3;
+    padding: 20px;
 }
 .checkoutpro_img{
     object-fit: contain;
@@ -12,16 +15,22 @@
     height:180px;
 }
 .checkoutpro_info{
-    padding-left: 20px;
+    padding: 20px;
+    margin-top: 10px;
 
 }
+.checkoutpro_info > p{
+    margin-bottom: 5px;
+}
 .checkoutpro_info > button{
-    background: #f0c14b;
+    background-color: #f0c14b;
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
-    margin-top: 10px;
-    color: #111;
+    font-size: 13px;
+    margin-top: 20px;
+    padding: 5px;
     cursor: pointer;
+    color: #111;
 }
 .checkoutpro_title{
     font-size: 17px;

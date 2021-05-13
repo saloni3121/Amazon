@@ -13,7 +13,7 @@ function Checkout() {
     return (
         <div className="checkout">
             <div className="checkout__left">
-                <img className="checkout__ad"src="https://jumprov.files.wordpress.com/2017/01/asc_bannersxsite_houseads_728x90_pv_en-gb._cb1198675309_-prime-video.gif"></img>
+                <img className="checkout__ad" src= "https://jumprov.files.wordpress.com/2017/01/asc_bannersxsite_houseads_728x90_pv_en-gb._cb1198675309_-prime-video.gif"></img>
                 {basket?.length ===0 ? (
                         <div className="wrapper">
                             <h2 className="checkout__display">Your basket is empty</h2>
@@ -23,8 +23,8 @@ function Checkout() {
                             </Link>
                         </div>
                     ):( 
-                        <div>
-                            <h2>Your basket is here</h2>
+                        <div className="checkout__title">
+                            <h2>All items you added to the basket</h2>
                             {basket.map(item=>(
                                 <CheckoutProduct
                                     id={item.id}

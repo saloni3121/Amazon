@@ -14,9 +14,9 @@ function Subtotal() {
                 renderText= {(value)=>(
                     <>
                         <p style={{marginTop: '-8px'}}>Subtotal ({basket.length} items) : <strong>{`${value}`}</strong></p><br></br>
-                        <small className="subtotal__gift">
+                        <p className="subtotal__gift">
                             <input className="subtotal__input" type="checkbox"/>This order contains gift
-                        </small>
+                        </p>
                     </>
                 )}
                 decimalScale={2}
