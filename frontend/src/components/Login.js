@@ -13,7 +13,6 @@ function Login() {
         event.preventDefault();
         auth.signInWithEmailAndPassword(email,password)
             .then((auth)=>{
-                // redirect to home page
                 history.push('/'); 
             })
             .catch(e=> alert(e.message));
@@ -44,7 +43,11 @@ function Login() {
                 </form>
                 <p>By continuing, you agree to Amazon's Conditions of Use and Privacy Notice. Please see our Privacy Notice, our Cookies and interest-based Notice.</p>
                 <small>----------New to Amazon?---------</small>
-                <button onClick={register} className="login__create">Create your Amazon Account</button>
+                <Link to ="/register">
+                     <button className="login__create">Create your Amazon Account</button>
+                     {/* <button onClick={register} className="login__create">Create your Amazon Account</button> */}
+
+                </Link>
             </div>
         </div>
     )

@@ -24,7 +24,10 @@ function Checkout() {
                         </div>
                     ):( 
                         <div className="checkout__title">
-                            <h2>All items you added to the basket</h2>
+                            <h2 style={{display:'inline-block'}}>All items you added to the basket</h2>
+                            <Link to ="/">
+                                <button className="checkout__button_2">Continue Shopping</button>
+                            </Link>
                             {basket.map(item=>(
                                 <CheckoutProduct
                                     id={item.id}

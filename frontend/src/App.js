@@ -7,6 +7,8 @@ import Checkout from './components/Checkout';
 import Login from './components/Login';
 import { useStateValue } from './provider/StateProvider';
 import { auth } from './FireBase/Firebase';
+import Register from './components/Register';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -32,7 +34,6 @@ function App() {
     console.log("User is >>>>>", user);
 
     return() =>{
-      // cleanup if any
       unsubscribe();
     }
 
@@ -42,9 +43,13 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          <Route path="/register">
+            <Register/>
+          </Route>
           <Route path="/checkout">
             <Header/>
             <Checkout/>
+            <Footer/>
           </Route>
           <Route path="/login">
             <Login/>
@@ -52,6 +57,7 @@ function App() {
           <Route path="/">
             <Header/>
             <Home/>
+            <Footer/>
           </Route>
         </Switch>
       </div>

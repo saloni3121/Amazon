@@ -7,7 +7,6 @@ import { useStateValue } from '../provider/StateProvider';
 import { auth } from '../FireBase/Firebase';
 
 function Header() {
-
     const [{basket, user}] = useStateValue();
     const login = ()=>{
         if(user){

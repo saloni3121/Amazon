@@ -5,11 +5,12 @@ import { useStateValue } from '../provider/StateProvider';
 
 function Product({id,title,image,price,rating}) {
 
-    const[{basket},dispatch] = useStateValue();
+    const[{basket, user},dispatch] = useStateValue();
 
     const add = ()=>{
-        console.log(basket)
-        dispatch({
+        if(user?.email){
+            alert(`${title} has been added to your cart`);
+            dispatch({
             type: "ADD",
             item:{
                 id: id,
@@ -17,8 +18,10 @@ function Product({id,title,image,price,rating}) {
                 image: image,
                 price: price,
                 rating: rating
-            }
-        })
+            }})
+        }else{
+            alert("You need to log in to add items to basket")
+        }
     }
     return (
         <div className="product">

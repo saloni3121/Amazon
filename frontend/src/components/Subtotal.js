@@ -7,7 +7,7 @@ import { BasketTotal } from '../provider/Reducer';
 function Subtotal() {
 
     const[{basket},dispatch] = useStateValue();
-
+    const val = BasketTotal(basket);
     return (
         <div className="subtotal">
             <CurrencyFormat
@@ -25,7 +25,7 @@ function Subtotal() {
                 thousandSeparator={true}
                 prefix={"€ "}
             />
-            <button>Proceed to checkout</button>
+            <button onClick={()=> alert(`Your total bill is € ${val}`)}>Proceed to checkout</button>
         </div>
     )
 }
